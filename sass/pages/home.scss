@@ -1,0 +1,222 @@
+// --------------------- HOME --------------------- //
+
+.header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.164);
+
+    .boxLin {
+        background-color: #506554;
+        
+        .boxLinCenter {
+            max-width: 1300px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            margin: 0 auto;
+            padding: 0 4%;
+
+            p {
+                margin-right: 20px;
+                color: #ffffff;
+                font-size: 14px;
+            }
+    
+            .imgLinguagem {
+                width: 20px;
+                height: 13px;
+                border-radius: 2px;
+            }
+        
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+        }
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .menu-mobile i {
+        font-size: 30px;
+        color: #506554;
+    }
+
+    .logo {
+        margin-top: 5px;
+        img {
+            width: 150px;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin-left: 25px;
+        
+        a {
+            color: #333333;
+            font-weight: 400;
+            transition: 0.4s ease-in;
+
+            &:hover {
+                color: #506554;
+            }
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.13)), url("../../imgs/banner.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        .text-bx {
+            margin-top: 110px;
+            width: 40%;
+
+            h1 {
+                font-size: 38px;
+                line-height: 2.8rem;
+                color: #92962B;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.24);
+
+                span {
+                    color: #E4E5D8;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.24);
+                }
+            }
+        }
+    
+        .img-bx {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 110px;
+            width: 50%;
+
+            img {
+                width: 75%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .homeSubtitle {
+        text-align: center;
+        color: #E4E5D8;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.171);
+    }
+}
+
+@media (max-width: 970px) {
+    /*-------------------- MAIN --------------------*/
+    .header {
+        .menu-mobile {
+            display: block;
+        }
+    
+        nav ul {
+            background-color: #506554;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 100%;
+            transform: translate(-110%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+            transition: 0.5s ease-in;
+        }
+    
+        nav ul.active {
+            transform: translateX(0);
+        }
+    
+        nav ul li {
+            margin: 0;
+
+            a {
+                color: #ffffff;
+                font-weight: 400;
+            }
+        }
+    } 
+
+    .main {
+        height: 100%;
+        padding-bottom: 30px;
+
+        .container {
+            flex-direction: column;
+    
+            .text-bx {
+                margin-top: 40px;
+                width: 100%;
+            }
+        
+            .img-bx {
+                width: 90%;
+                margin-top: 70px;
+    
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .main {
+        .container {
+            .text-bx {
+                h1 {
+                    font-size: 30px;
+                }
+            }
+        
+            .img-bx {
+                width: 90%;
+    
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

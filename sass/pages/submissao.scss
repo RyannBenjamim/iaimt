@@ -1,0 +1,48 @@
+// --------------------- SUBMISSÃO --------------------- //
+
+.submissao {
+    height: 80vh;
+    width: 70%;
+    height: 100%;
+    background-color: #415043;
+
+    padding: 50px 4%;
+    margin-top: 80px;
+    color: white;
+
+    h1 {
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .containerSub { 
+        .titleSub {
+            margin-top: 20px;
+        }
+
+        .subTitleSub {
+            margin-left: 30px;
+
+            strong {
+                font-size: 30px;
+                margin-right: 5px;
+            }
+        }
+
+        .text {
+            color: white;
+            margin-top: 30px;
+            text-indent: 30px;
+            line-height: 1.5rem;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    .submissao {
+        width: 90%;
+    }
+}
